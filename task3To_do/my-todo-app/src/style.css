@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f4eaff; /* Soft lavender background */
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.maincontainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Clean white for contrast */
+}
+
+#titlecontainer {
+  width: 100%;
+  background-color: #7b1fa2; /* Deep purple for header */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.containerwrapper {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  background-color: #f4eaff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.todos {
+  background-color: #d1c4e9; /* Light purple for cards */
+  border: 2px solid #9575cd; /* Slightly darker purple for border */
+  height: 15rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.6rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#title {
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #f3e5f5; /* Very light purple for input */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+}
+
+#description {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #f3e5f5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#enterrr {
+  border: none;
+  border-radius: 0.5rem;
+  height: 3rem;
+  font-size: 1rem;
+  background-color: #7b1fa2; /* Deep purple */
+  color: white;
+  font-family: 'Hanken Grotesk', sans-serif;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+#enterrr:hover {
+  background-color: #4a0072; /* Darker purple on hover */
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #7b1fa2; /* Deep purple for task titles */
+}
+
+p {
+  margin: 0;
+  color: #333333; /* Darker gray for text */
+  overflow-y: scroll;
+}
+
+p::-webkit-scrollbar {
+  display: none;
+}
+
+.delete_btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: #ba68c8; /* Soft pinkish-purple for delete button */
+  color: white;
+  border: none;
+  font-family: 'Hanken Grotesk', sans-serif;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out;
+}
+
+.todos:hover > .delete_btn {
+  opacity: 1;
+}

@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: rgb(137, 149, 248);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fbfbfb;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.taken.red {
+    background-color: rgb(249, 38, 38);
+}
+
+.cell.taken.yellow {
+    background-color: rgba(246, 255, 0, 0.963);
+}
+
+#status {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgb(171, 194, 237);
+}
